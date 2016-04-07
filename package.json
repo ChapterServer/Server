@@ -1,0 +1,30 @@
+{
+  "name": "chapterserver.server",
+  "version": "0.1.0",
+  "description": "The server backend which serves as the platform for ChapterServer data",
+  "main": "server.js",
+  "dependencies": {
+    "good": "^6.6.0",
+    "good-console": "^5.3.1",
+    "hapi": "^13.3.0",
+    "hapi-api-version": "^1.0.2",
+    "joi": "^8.0.5"
+  },
+  "devDependencies": {
+    "code": "^2.2.0",
+    "lab": "^10.3.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChapterServer/Server.git"
+  },
+  "author": "Improving",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChapterServer/Server/issues"
+  },
+  "homepage": "https://github.com/ChapterServer/Server#readme"
+}
