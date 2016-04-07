@@ -4,11 +4,16 @@
   "description": "The server backend which serves as the platform for ChapterServer data",
   "main": "server.js",
   "dependencies": {
+    "bcrypt": "^0.8.5",
+    "boom": "^3.1.2",
+    "glob": "^7.0.3",
     "good": "^6.6.0",
     "good-console": "^5.3.1",
     "hapi": "^13.3.0",
     "hapi-api-version": "^1.0.2",
-    "joi": "^8.0.5"
+    "hapi-auth-jwt": "^4.0.0",
+    "joi": "^8.0.5",
+    "mongoose": "^4.4.11"
   },
   "devDependencies": {
     "code": "^2.2.0",
