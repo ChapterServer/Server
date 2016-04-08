@@ -1,26 +1,25 @@
 'use strict';
 
-const User = require('../model/User');
-const Boom = require('boom');
+const Assoc = require('../model/Association');
 
 module.exports = {
   method: 'GET',
-  path: '/users',
+  path: '/v1/associations',
   config: {
     handler: (req, res) => {
-      User
+      Assoc
         .find()
-        // Deselect the password and version fields
-        .select('-password -__v')
+        .select('-__v -_id')
         .exec((err, users) => {
           if (err) {
             throw Boom.badRequest(err);
           }
           if (!users.length) {
-            throw Boom.notFound('No users found!');
+            res([]);
+          } else {
+            res(users);
           }
-          res(users);
-        })
+        });
     }
   }
 }

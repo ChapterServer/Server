@@ -10,7 +10,7 @@ const server = new Hapi.Server();
 server.connection({
     host: env.host,
     port: env.port,
-    routes: { cors: true }
+    routes: { cors: { origin: ['*'] } }
 });
 
 server.register([
@@ -20,8 +20,8 @@ server.register([
 ], (err) => {
     if (err) { throw err; }
 
-    server.auth.strategy('jwt', 'jwt', 'try', {
-        key: env.auth.secret,
+    server.auth.strategy('jwt', 'jwt', 'required', {
+        key: new Buffer(env.auth.secret, 'base64'),
         verifyOptions: { algorithms: ['HS256'] }
     });
 

@@ -7,7 +7,7 @@ angular.module( 'sample.home', [
 
   $scope.callApi = function() {
     // Just call the API as you'd do using $http
-    $http.get('http://localhost:3000/users').then(function() {
+    $http.get('http://localhost:3000/associations').then(function() {
       alert("We got the secured data successfully");
     }, function(response) {
       if (response.status == -1) {
