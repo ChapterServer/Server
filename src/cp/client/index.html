@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation for Apps</title>
+    <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
+
+    <script src="./assets/js/foundation.js"></script>
+
+    <script type="text/javascript" src="https://cdn.auth0.com/js/lock-9.0.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular-cookies.js"></script>
+    <script type="text/javascript" src="https://cdn.auth0.com/w2/auth0-angular-4.js"></script>
+    <script src="//cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.js" type="text/javascript"> </script>
+    <script src="//cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js" type="text/javascript"> </script>
+
+    <script src="./assets/js/templates.js"></script>
+    <script src="./assets/js/routes.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </head>
+  <body>
+    <div class="grid-frame vertical">
+      <div class="grid-content shrink" style="padding: 0;">
+
+        <div class="menu-group primary">
+          <div class="menu-group-left">
+
+            <ul class="menu-bar primary condense icon-left">
+              <li><a ui-sref="home">
+                <img zf-iconic="" icon="dashboard" size="medium"><strong>Control Panel</strong>
+              </a></li>
+              <li><a ui-sref="associations">
+                Associations
+              </a></li>
+            </ul>
+
+          </div>
+
+          <div class="menu-group-right">
+
+            <ul class="menu-bar primary condense icon-left">
+              <li><a href="#">
+                <img zf-iconic="" icon="cog" size="medium">Login
+              </a></li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+      <div ui-view class="grid-content">
+      </div>
+    </div>
+  </body>
+</html>
